@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chemistry Applications</title>
+
+<style>
+body {
+    font-family: "Bookman Old Style", serif;
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/ea/55/3c/ea553c153d465aed10e6dd7286690cbf.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://i.pinimg.com/1200x/5c/6a/3a/5c6a3ad79b0cf2c9b11a3388e0c5be19.jpg");
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    background: #2B35AF;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button {
+    padding: 14px 32px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+
+    background: linear-gradient(135deg, #2B35AF, #6A82FB);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect */
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    transition: 0.5s;
+}
+
+/* Hover */
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+/* SECTIONS */
+section { display: none; padding: 40px; text-align: center; }
+.active { display: block; }
+.hero { padding: 100px; }
+
+/* CARDS */
+.container { display: flex; flex-wrap: wrap; justify-content: center; }
+
+.flip-card {
+    width: 260px;
+    height: 260px;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.flip-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/1200x/30/87/c2/3087c258c711fa296e1711c145babd48.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+}
+
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/736x/85/0c/b2/850cb2b7e1d0a8bb841bccf41ed75fc9.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.flip-card:hover .flip-back {
+    opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Applications</h1>
+<p>Applications and Importance</p>
+</header>
+
+<nav>
+<a href="Home page.html">Home</a>
+<a href="Namedreactions.html">Named Reactions</a>
+<a href="Mechanism.html">Mechanism</a>
+<a href="Imp.html">Applications</a>
+<a href="Quickrevision.html">Quick Revision</a>
+<a href="Quicklinks.html">Quick Links</a>
+<a href="Quizz.html">Quiz</a>
+<a href="glossary.html">Glossary</a>
+<a href="About.html">About Us</a>
+</nav>
+
+
+<section id="home" class="active hero">
+<h1>Welcome 👩‍🔬</h1>
+<h2>Explore real-life applications of chemistry reactions</h2>
+<button onclick="showPage('applications')">Explore</button>
+</section>
+
+<section id="applications">
+<h2>Hover → Preview | Click → Open Details</h2>
+
+<div class="container">
+
+<!-- ALL CARDS (UNCHANGED CONTENT) -->
+
+<div class="flip-card" onclick="openNewTab('Aldol Condensation')">
+<div class="flip-front"><h2>Aldol Condensation</h2></div>
+<div class="flip-back"><h3>1. Used to form β-hydroxy aldehydes/ketones<br><br>2. Important in making complex organic molecules<br><br>3. Used in synthesis of resins, perfumes, and pharmaceuticals</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Friedel-Crafts Acylation')">
+<div class="flip-front"><h2>Friedel-Crafts</h2></div>
+<div class="flip-back"><h3>1. Used to introduce alkyl or acyl group into benzene<br><br>2. Important in making aromatic compounds<br><br>3. Used in synthesis of dyes, drugs, and plastics</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Cannizzaro Reaction')">
+<div class="flip-front"><h2>Cannizzaro</h2></div>
+<div class="flip-back"><h3>1. Converts aldehydes into alcohol and acid (no α-H)<br><br>2. Used in preparation of benzyl alcohol and benzoic acid<br><br>3. Important in industrial organic synthesis</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Wurtz Reaction')">
+<div class="flip-front"><h2>Wurtz Reaction</h2></div>
+<div class="flip-back"><h3>1. Used to prepare higher alkanes from alkyl halides<br><br>2. Helps in carbon–carbon bond formation<br><br>3. Used in laboratory synthesis of symmetrical alkanes</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Sandmeyer Reaction')">
+<div class="flip-front"><h2>Sandmeyer</h2></div>
+<div class="flip-back"><h3>1. Used to replace diazonium group with Cl, Br, CN<br><br>2. Helps in synthesis of haloarenes and nitriles<br><br>3. Important in dye and pharmaceutical industries</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Rosenmund Reduction')">
+<div class="flip-front"><h2>Rosenmund Reduction</h2></div>
+<div class="flip-back"><h3>1. Converts acid chlorides to aldehydes<br><br>2. Used in synthesis of aromatic aldehydes<br><br>3. Important in making perfumes and flavoring compounds</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Hofmann Rearrangement')">
+<div class="flip-front"><h2>Hofmann Rearrangement</h2></div>
+<div class="flip-back"><h3>1. Converts amides to primary amines (with one less carbon)<br><br>2. Used in preparation of amines in organic synthesis<br><br>3. Important in making drugs and agrochemicals</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Reimer-Tiemann Reaction')">
+<div class="flip-front"><h2>Reimer-Tiemann</h2></div>
+<div class="flip-back"><h3>1. Used to prepare salicylaldehyde from phenol<br><br>2. Important in making flavoring agents and perfumes<br><br>3. Used in synthesis of dyes and medicines</h3></div>
+</div>
+
+<div class="flip-card" onclick="openNewTab('Finkelstein Reaction')">
+<div class="flip-front"><h2>Finkelstein Reaction</h2></div>
+<div class="flip-back"><h3>1. Used to prepare alkyl iodides from alkyl chlorides/bromides<br><br>2. Helpful in nucleophilic substitution reactions<br><br>3. Used in synthesis of pharmaceutical intermediates</h3></div>
+</div>
+
+</div>
+</section>
+<script>
+function showPage(page){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+}
+
+/* CREATE OVERLAY CARD */
+function openNewTab(title){
+
+let importance="", funfact="";
+
+if(title.includes("Aldol")){
+importance="Forms strong carbon–carbon bonds.";
+funfact=`• The name “Aldol” comes from aldehyde + alcohol.<br>
+• Can undergo dehydration to form α,β-unsaturated compounds.<br>
+• Works with both aldehydes and ketones.<br>
+• Can be self-aldol or cross-aldol reaction.`;
+}
+else if(title.includes("Cannizzaro")){
+importance="Produces alcohol and acid.";
+funfact=`• It is a self redox (disproportionation) reaction.<br>
+• Requires strong base like NaOH or KOH.<br>
+• Works only with aldehydes lacking α-hydrogen.<br>
+• Named after Stanislao Cannizzaro.<br>
+• Cross Cannizzaro reaction also exists.`;
+}
+else if(title.includes("Wurtz")){
+importance="Forms higher alkanes.";
+funfact=`• Uses sodium metal in dry ether.<br>
+• Mainly works with primary alkyl halides.<br>
+• Can form symmetrical alkanes.<br>
+• One of the oldest C–C bond forming reactions.`;
+}
+else if(title.includes("Sandmeyer")){
+importance="Prepares haloarenes.";
+funfact=`• Uses copper salts (CuCl, CuBr, CuCN).<br>
+• Involves loss of nitrogen gas (N₂).<br>
+• Named after Traugott Sandmeyer.<br>
+• High yield due to gas escape.`;
+}
+else if(title.includes("Rosenmund")){
+importance="Forms aldehydes.";
+funfact=`• Uses poisoned catalyst (Pd/BaSO₄).<br>
+• Prevents further reduction to alcohol.<br>
+• Requires hydrogen gas (H₂).<br>
+• Very selective reaction.`;
+}
+else if(title.includes("Hofmann")){
+importance="Forms amines.";
+funfact=`• Uses Br₂ + NaOH/KOH.<br>
+• Carbon is lost as CO₂.<br>
+• Also called Hofmann degradation.<br>
+• Produces simpler amines.`;
+}
+else if(title.includes("Reimer")){
+importance="Forms salicylaldehyde.";
+funfact=`• Uses chloroform (CHCl₃) and base.<br>
+• Forms carbene intermediate (:CCl₂).<br>
+• Works mainly on phenols.<br>
+• Gives ortho product as major product.`;
+}
+else if(title.includes("Friedel")){
+importance="Aromatic substitution.";
+funfact=`• Uses Lewis acid catalyst like AlCl₃.<br>
+• Two types: Alkylation and Acylation.<br>
+• Acylation avoids rearrangement.<br>
+• Alkylation may cause rearrangement.<br>
+• Named after Friedel and Crafts.`;
+}
+else if(title.includes("Finkelstein")){
+importance="Forms alkyl iodides.";
+funfact=`• Uses NaI in acetone.<br>
+• Driven by precipitation of NaCl/NaBr.<br>
+• Follows SN2 mechanism.<br>
+• Produces highly reactive alkyl iodides.`;
+}
+
+/* CREATE OVERLAY */
+let overlay = document.createElement("div");
+
+overlay.innerHTML = `
+<div style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:1000;
+">
+
+<div style="
+background:white;
+width:60%;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+text-align:center;
+animation:fadeIn 0.4s;
+">
+
+<h1 style="color:#2B35AF">${title}</h1>
+
+<div style="
+margin-top:15px;
+padding:15px;
+border-radius:12px;
+border-left:6px solid #2B35AF;
+background:#D9E1F1;
+">
+<h2>📌 Importance</h2>
+<p>${importance}</p>
+</div>
+
+<div style="
+margin-top:15px;
+padding:15px;
+border-radius:12px;
+border-left:6px solid #ff4d6d;
+background:#ffe0ec;
+">
+<h2>✨ Fun Facts</h2>
+<p>${funfact}</p>
+</div>
+
+<button onclick="this.closest('div').parentElement.remove()" 
+style="
+margin-top:20px;
+padding:10px 20px;
+background:#2B35AF;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+">
+⬅ Back to Applications
+</button>
+
+</div>
+</div>
+`;
+
+document.body.appendChild(overlay);
+}
+</script>
+</body>
+</html>

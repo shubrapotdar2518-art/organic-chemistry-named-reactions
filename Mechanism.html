@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chemistry Named Reactions</title>
+
+<style>
+body {
+    font-family: "Bookman Old Style", serif;
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/ea/55/3c/ea553c153d465aed10e6dd7286690cbf.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* HEADER */
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://i.pinimg.com/1200x/5c/6a/3a/5c6a3ad79b0cf2c9b11a3388e0c5be19.jpg");
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    background: #2B35AF;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section { display: none; padding: 40px; text-align: center; }
+.active { display: block; }
+.hero { padding: 100px; }
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #2B35AF;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #1a237e;
+    transform: scale(1.05);
+}
+
+/* MECHANISM SECTION */
+#mechanisms {
+    background: transparent; /* shows background image */
+}
+
+.mechanism-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mech-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg,#2B35AF,#6A82FB);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mech-card:hover {
+    transform: scale(1.05);
+}
+
+.mech-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+
+.mech-card.active .mech-content {
+    max-height: 600px;
+}
+
+/* IMAGE ANIMATION */
+.mech-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.mech-card.active .mech-img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TIMELINE */
+.timeline p {
+    background: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+    background:#2B35AF;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Mechanisms</h1>
+</header>
+
+<nav>
+<a href="Home page.html">Home</a>
+<a href="Namedreactions.html">Named Reactions</a>
+<a href="Mechanism.html">Mechanism</a>
+<a href="Imp.html">Applications</a>
+<a href="Quickrevision.html">Quick Revision</a>
+<a href="Quicklinks.html">Quick Links</a>
+<a href="Quizz.html">Quiz</a>
+<a href="glossary.html">Glossary</a>
+<a href="About.html">About Us</a>
+</nav>
+
+
+<!-- MECHANISMS -->
+<section id="mechanisms" class="active">
+<h1>Reaction Mechanisms 🧪</h1>
+
+<div class="mechanism-container">
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Aldol Condensation</h2>
+<div class="mech-content">
+<img src="https://tse1.mm.bing.net/th/id/OIP.tXSM5wN7ajixTSQ0L42QWAHaDa?pid=Api&P=0&h=180.jpg" class="mech-img">
+<p><b>Reagents:</b> NaOH</p>
+<div class="timeline">
+<p>Enolate formation</p>
+<p>Nucleophilic attack</p>
+<p>β-hydroxy formation</p>
+<p>Dehydration</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Friedel-Crafts Acylation</h2>
+<div class="mech-content">
+<img src="https://tse3.mm.bing.net/th/id/OIP.ErhMSYq1qVeBP9PrzFzfzAHaDi?pid=Api&P=0&h=180.jpg" class="mech-img">
+<p><b>Reagents:</b> AlCl₃</p>
+<div class="timeline">
+<p>Acylium ion</p>
+<p>Electrophilic attack</p>
+<p>Ketone formation</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Cannizzaro Reaction</h2>
+<div class="mech-content">
+<img src="https://www.chemistrylearner.com/wp-content/uploads/2020/06/Cannizzaro-Reaction.jpg" class="mech-img">
+<p><b>Reagents:</b> Strong base</p>
+<div class="timeline">
+<p>Hydride transfer</p>
+<p>Alcohol + Acid</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Wurtz Reaction</h2>
+<div class="mech-content">
+<img src="https://tse4.mm.bing.net/th/id/OIP.n3O4bKxmfJ_bUD-cl1qgfAHaCe?pid=Api&P=0&h=180.jpg" class="mech-img">
+<p><b>Reagents:</b> Na/Ether</p>
+<div class="timeline">
+<p>Radical formation</p>
+<p>Coupling</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Sandmeyer Reaction</h2>
+<div class="mech-content">
+<img src="https://www.chemistrylearner.com/wp-content/uploads/2020/01/Sandmeyer-Reaction.jpg" class="mech-img">
+<p><b>Reagents:</b> Cu salts</p>
+<div class="timeline">
+<p>Diazonium formation</p>
+<p>Substitution</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Rosenmund Reduction</h2>
+<div class="mech-content">
+<img src="https://tse2.mm.bing.net/th/id/OIP.wGgvV-I82W84NKGq-J_OeQHaCS?pid=Api&P=0&h=180.jpg" class="mech-img">
+<p><b>Reagents:</b> H₂ / Pd-BaSO₄</p>
+<div class="timeline">
+<p>Acid chloride adsorption</p>
+<p>Hydrogenation</p>
+<p>Formation of aldehyde</p>
+<p>Poisoned catalyst prevents further reduction</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Hofmann Rearrangement</h2>
+<div class="mech-content">
+<img src="https://chemistrywithwiley.com/wp-content/uploads/2021/08/Hofmann-Rearrangement-Reaction.png" class="mech-img">
+<p><b>Reagents:</b> Br₂ + NaOH</p>
+<div class="timeline">
+<p>Formation of N-bromoamide</p>
+<p>Rearrangement to isocyanate</p>
+<p>Hydrolysis</p>
+<p>Primary amine formation</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Reimer–Tiemann Reaction</h2>
+<div class="mech-content">
+<img src="https://cmds-test.vedantu.com/prod/question-sets/255f5129-10a9-4c11-9634-c4e9ce6c861a6450053259062727811.png" class="mech-img">
+<p><b>Reagents:</b> CHCl₃ + NaOH</p>
+<div class="timeline">
+<p>Formation of dichlorocarbene (:CCl₂)</p>
+<p>Electrophilic attack on phenol</p>
+<p>Hydrolysis</p>
+<p>Formation of salicylaldehyde</p>
+</div>
+</div>
+</div>
+
+<div class="mech-card" onclick="toggleMech(this)">
+<h2>Finkelstein Reaction</h2>
+<div class="mech-content">
+<img src="https://tse1.mm.bing.net/th/id/OIP.orH-zRMt6hPUOR0f8maBcgHaDX?pid=Api&P=0&h=180" class="mech-img">
+<p><b>Reagents:</b> NaI / Acetone</p>
+<div class="timeline">
+<p>Nucleophile (I⁻) attack</p>
+<p>SN2 transition state</p>
+<p>Leaving group removal</p>
+<p>Alkyl iodide formation</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<script>
+function showPage(page){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+}
+
+function toggleMech(card){
+card.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

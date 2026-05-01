@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chemistry Quiz</title>
+
+<style>
+body {
+    font-family: "Bookman Old Style", serif;
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/ea/55/3c/ea553c153d465aed10e6dd7286690cbf.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://i.pinimg.com/1200x/5c/6a/3a/5c6a3ad79b0cf2c9b11a3388e0c5be19.jpg");
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+/* NAVBAR */
+nav {
+    background: #2B35AF;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    display: none;
+    color: black;
+}
+
+.container:target { display: block; }
+#start { display: block; }
+
+/* HEADINGS */
+h1 { 
+    color: white;
+}
+h2 {
+    color: #1a237e;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    margin: 12px 6px;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #2B35AF, #6A82FB);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #1a237e, #4b6cb7);
+}
+
+/* QUESTION */
+.question {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 17px;
+    color: black;
+}
+
+/* OPTIONS */
+.options label {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+}
+
+.options label:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.02);
+}
+
+.options input {
+    margin-right: 8px;
+}
+
+/* RESULT BOX */
+ul {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 12px;
+    line-height: 1.8;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Quiz</h1>
+<p>Test Your Organic Chemistry Knowledge 🧪</p>
+</header>
+
+<nav>
+<a href="Home page.html">Home</a>
+<a href="Namedreactions.html">Named Reactions</a>
+<a href="Mechanism.html">Mechanism</a>
+<a href="Imp.html">Applications</a>
+<a href="Quickrevision.html">Quick Revision</a>
+<a href="Quicklinks.html">Quick Links</a>
+<a href="Quizz.html">Quiz</a>
+<a href="glossary.html">Glossary</a>
+<a href="About.html">About Us</a>
+</nav>
+
+<!-- START -->
+<div class="container" id="start">
+<h2>Chemistry Quiz</h2>
+<p>Test your knowledge with 10 questions!</p>
+<a href="#q1" class="btn">Start Quiz</a>
+</div>
+
+<!-- Q1 -->
+<div class="container" id="q1">
+<h2>Question 1</h2>
+<div class="question">Which functional group is present in alcohols?</div>
+<div class="options">
+<label><input type="radio"> Carbonyl (-C=O)</label>
+<label><input type="radio"> Hydroxyl (-OH)</label>
+<label><input type="radio"> Amino (-NH₂)</label>
+<label><input type="radio"> Carboxyl (-COOH)</label>
+</div>
+<a href="#start" class="btn">Previous</a>
+<a href="#q2" class="btn">Next</a>
+</div>
+
+<!-- Q2 -->
+<div class="container" id="q2">
+<h2>Question 2</h2>
+<div class="question">What is the IUPAC name of CH₃–CH₂–OH?</div>
+<div class="options">
+<label><input type="radio"> Methanol</label>
+<label><input type="radio"> Ethanol</label>
+<label><input type="radio"> Propanol</label>
+<label><input type="radio"> Butanol</label>
+</div>
+<a href="#q1" class="btn">Previous</a>
+<a href="#q3" class="btn">Next</a>
+</div>
+
+<!-- Q3 -->
+<div class="container" id="q3">
+<h2>Question 3</h2>
+<div class="question">Which type of isomerism is shown by butane (C₄H₁₀)?</div>
+<div class="options">
+<label><input type="radio"> Chain isomerism</label>
+<label><input type="radio"> Geometrical isomerism</label>
+<label><input type="radio"> Optical isomerism</label>
+<label><input type="radio"> Functional isomerism</label>
+</div>
+<a href="#q2" class="btn">Previous</a>
+<a href="#q4" class="btn">Next</a>
+</div>
+
+<!-- Q4 -->
+<div class="container" id="q4">
+<h2>Question 4</h2>
+<div class="question">Which reagent is used to test unsaturation in hydrocarbons?</div>
+<div class="options">
+<label><input type="radio"> Acidified KMnO₄</label>
+<label><input type="radio"> NaOH solution</label>
+<label><input type="radio"> Dilute HCl</label>
+<label><input type="radio"> AgNO₃ solution</label>
+</div>
+<a href="#q3" class="btn">Previous</a>
+<a href="#q5" class="btn">Next</a>
+</div>
+
+<!-- Q5 -->
+<div class="container" id="q5">
+<h2>Question 5</h2>
+<div class="question">Which compound is known as vinegar?</div>
+<div class="options">
+<label><input type="radio"> Formic acid</label>
+<label><input type="radio"> Acetic acid</label>
+<label><input type="radio"> Citric acid</label>
+<label><input type="radio"> Lactic acid</label>
+</div>
+<a href="#q4" class="btn">Previous</a>
+<a href="#q6" class="btn">Next</a>
+</div>
+
+<!-- Q6 -->
+<div class="container" id="q6">
+<h2>Question 6</h2>
+<div class="question">Carboxylic acid reacts with alcohol to form:</div>
+<div class="options">
+<label><input type="radio"> Ether</label>
+<label><input type="radio"> Aldehyde</label>
+<label><input type="radio"> Ester</label>
+<label><input type="radio"> Ketone</label>
+</div>
+<a href="#q5" class="btn">Previous</a>
+<a href="#q7" class="btn">Next</a>
+</div>
+
+<!-- Q7 -->
+<div class="container" id="q7">
+<h2>Question 7</h2>
+<div class="question">Which is an addition reaction?</div>
+<div class="options">
+<label><input type="radio"> CH₄ + Cl₂ → CH₃Cl</label>
+<label><input type="radio"> C₂H₄ + H₂ → C₂H₆</label>
+<label><input type="radio"> Esterification</label>
+<label><input type="radio"> Combustion</label>
+</div>
+<a href="#q6" class="btn">Previous</a>
+<a href="#q8" class="btn">Next</a>
+</div>
+
+<!-- Q8 -->
+<div class="container" id="q8">
+<h2>Question 8</h2>
+<div class="question">Addition of hydrogen is called:</div>
+<div class="options">
+<label><input type="radio"> Hydration</label>
+<label><input type="radio"> Hydrogenation</label>
+<label><input type="radio"> Halogenation</label>
+<label><input type="radio"> Cracking</label>
+</div>
+<a href="#q7" class="btn">Previous</a>
+<a href="#q9" class="btn">Next</a>
+</div>
+
+<!-- Q9 -->
+<div class="container" id="q9">
+<h2>Question 9</h2>
+<div class="question">Sweet smell of esters is due to:</div>
+<div class="options">
+<label><input type="radio"> Oxidation</label>
+<label><input type="radio"> Esterification</label>
+<label><input type="radio"> Saponification</label>
+<label><input type="radio"> Cracking</label>
+</div>
+<a href="#q8" class="btn">Previous</a>
+<a href="#q10" class="btn">Next</a>
+</div>
+
+<!-- Q10 -->
+<div class="container" id="q10">
+<h2>Question 10</h2>
+<div class="question">Hydrolysis of ester is called:</div>
+<div class="options">
+<label><input type="radio"> Hydrogenation</label>
+<label><input type="radio"> Neutralization</label>
+<label><input type="radio"> Saponification</label>
+<label><input type="radio"> Esterification</label>
+</div>
+<a href="#q9" class="btn">Previous</a>
+<a href="#result" class="btn">Finish</a>
+</div>
+
+<!-- RESULT -->
+<div class="container" id="result">
+<h2>Quiz Completed!</h2>
+<p>Correct Answers:</p>
+<ul>
+<li>Q1: Hydroxyl (-OH)</li>
+<li>Q2: Ethanol</li>
+<li>Q3: Chain isomerism</li>
+<li>Q4: Acidified KMnO₄</li>
+<li>Q5: Acetic acid</li>
+<li>Q6: Ester</li>
+<li>Q7: C₂H₄ + H₂ → C₂H₆</li>
+<li>Q8: Hydrogenation</li>
+<li>Q9: Esterification</li>
+<li>Q10: Saponification</li>
+</ul>
+<a href="#start" class="btn">Restart</a>
+</div>
+
+</body>
+</html>
