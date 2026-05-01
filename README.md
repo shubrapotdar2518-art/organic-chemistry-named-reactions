@@ -17,11 +17,7 @@ An interactive educational website designed to simplify the understanding of imp
 
 ## 🌐 Live Website
 
-[Click Here to View Project](https://yourusername.github.io/your-repo-name/)
-
-## 📸 Screenshots
-
-(Add screenshots here later)
+[Click Here to View Project]()
 
 ## 🎯 Purpose
 
